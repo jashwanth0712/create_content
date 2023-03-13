@@ -1,0 +1,25 @@
+{
+  "name": "create_content",
+  "version": "1.0.0",
+  "description": "lets go",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jashwanth0712/create_content.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jashwanth0712/create_content/issues"
+  },
+  "homepage": "https://github.com/jashwanth0712/create_content#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.2.1",
+    "openai-api": "^1.3.1"
+  }
+}
