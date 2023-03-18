@@ -3,7 +3,7 @@
 	"name": "create_content",
 	"builds":[
 		{
-			"src": "index.js", "use": "@now/node"
+			"src": "index.js", "use": "@vercel/node"
 		}
 	],
 	"routes": [
