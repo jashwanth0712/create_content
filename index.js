@@ -22,7 +22,8 @@ app.listen(port, () => {
 
 app.get("/generate-text", async (req, res) => {
   try {
-    const prompt = "Hi, I'm a chatbot. Ask me a question.";
+    // Get the text from the request
+    const prompt = req.query.text;
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: prompt,
