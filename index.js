@@ -42,6 +42,8 @@ app.get("/generate-text", async (req, res) => {
   } catch (error) {
     // console.error(error);
     console.error(error.response.data);
-    res.status(500).send("Error generating text");
+    // Send error message
+    let msg = error.response.data;
+    res.status(500).send(msg);
   }
 });
