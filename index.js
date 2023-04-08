@@ -22,10 +22,15 @@ app.listen(port, () => {
 
 app.get("/generate-text", async (req, res) => {
   try {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
     // Get the text from the request
     const prompt = req.query.text;
     const response = await openai.createCompletion({
       model: "text-davinci-003",
+      mode: 'no-cors', 
       prompt: prompt,
       // maxTokens: 5,
       temperature: 0.9,
