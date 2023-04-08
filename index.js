@@ -31,7 +31,6 @@ app.get("/generate-text", async (req, res) => {
     const prompt = req.query.text;
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      mode: 'no-cors', 
       prompt: prompt,
       // maxTokens: 5,
       temperature: 0.9,
